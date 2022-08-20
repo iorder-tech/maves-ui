@@ -1,7 +1,7 @@
 <template>
 	<div class="text-field">
 		<div class="text-field__label" v-if="label">{{ label }}</div>
-		<div class="text-field__content">
+		<div class="text-field__content" :style="styles">
 			<div class="text-field__content--icon" v-if="icon">
 				<!-- <icon :name="icon" /> -->
 			</div>
@@ -54,6 +54,10 @@
 			? 'var(--base-error-background-color)'
 			: 'var(--input-background-color)'
 	)
+
+	const styles = computed(() => ({
+		background: background.value,
+	}))
 </script>
 
 <style scoped lang="scss">
@@ -63,7 +67,6 @@
 			display: flex;
 			align-items: center;
 			height: 40px;
-			/* background: v-bind(background); */
 			border-radius: 5px;
 			flex: 1;
 			input {
