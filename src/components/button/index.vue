@@ -1,5 +1,5 @@
 <template>
-	<button class="btn" :disabled="disabled">
+	<button class="btn" :disabled="disabled" :style="styles">
 		<!-- <Icon :name="iconName" v-if="iconName" /> -->
 		<slot v-if="!icon" />
 	</button>
@@ -43,17 +43,19 @@
 	})
 
 	const iconMarginRight = computed(() => (icon ? '0' : '8px'))
+	const styles = computed(() => ({
+		width: width.value,
+		marginRight: iconMarginRight.value,
+		background: background.value,
+		color: color.value,
+	}))
 </script>
 
 <style lang="scss" scoped>
 	.btn {
-		/* width: v-bind('width'); */
-		/* max-width: v-bind(maxWidth); */
 		height: 42px;
 		border: 1px solid transparent;
 		border-radius: 4px;
-		/* background: v-bind(background); */
-		/* color: v-bind(color); */
 		font-weight: 600;
 		display: flex;
 		align-items: center;
