@@ -3,7 +3,7 @@
 		<div class="text-field__label" v-if="label">{{ label }}</div>
 		<div class="text-field__content" :style="styles">
 			<div class="text-field__content--icon" v-if="icon">
-				<font-awesome-icon :icon="icon" />
+				<icon :icon="icon" />
 			</div>
 			<input
 				@input="updateValue"

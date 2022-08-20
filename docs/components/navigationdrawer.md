@@ -18,15 +18,17 @@ The `m-navigation-drawer` component is what your users will utilize to navigate 
 
 ### Props
 
-| Name     | Type           | Default | Description |
-| -------- | -------------- | ------- | ----------- |
-| location | `right` `left` | left    |             |
+| Name        | Type           | Default | Description                   |
+| ----------- | -------------- | ------- | ----------------------------- |
+| location    | `right` `left` | left    |                               |
+| title       | string         |         |                               |
+| closeButton | `Event`        |         |                               |
+| padding     | string         | 0px     | Set padding to drawer content |
 
 ### Events
 
 | Name  | Parameters | Description |
 | ----- | ---------- | ----------- |
-| model |            |             |
 | model |            |             |
 
 ### Slots

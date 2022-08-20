@@ -11,7 +11,7 @@ library.add(fas)
 function install(app: App) {
 	for (const key in components) {
 		app.use(maska)
-		app.component('font-awesome-icon', FontAwesomeIcon)
+		app.component('icon', FontAwesomeIcon)
 		// @ts-expect-error
 		app.component(key, components[key])
 	}

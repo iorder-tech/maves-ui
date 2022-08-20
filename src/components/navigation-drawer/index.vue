@@ -4,16 +4,46 @@
 			<div class="navigation-drawer--overlay" v-if="modelValue" />
 		</Transition>
 		<Transition name="slide">
-			<div class="navigation-drawer__content" v-if="modelValue"><slot /></div>
+			<div
+				class="navigation-drawer__content"
+				v-if="modelValue"
+				:style="contentStyles"
+			>
+				<div
+					class="navigation-drawer__content__header"
+					v-if="title || closeButton"
+				>
+					<m-typography type="h3" v-if="title">{{ title }}</m-typography>
+
+					<m-button
+						type="ghost"
+						icon
+						iconName="fa-solid fa-circle-xmark"
+						v-if="closeButton"
+						:radius="50"
+						height="48px"
+					/>
+				</div>
+				<slot />
+			</div>
 		</Transition>
 	</div>
 </template>
 
 <script setup lang="ts">
-	const props = defineProps<{
+	import { computed } from 'vue'
+
+	const { padding } = defineProps<{
 		modelValue: boolean
 		location: 'left' | 'right'
+		title?: string
+		closeButton?: boolean
+		padding?: string
 	}>()
+
+	const contentStyles = computed(() => ({
+		padding: padding || 0,
+	}))
 </script>
 
 <style lang="scss" scoped>
@@ -33,10 +63,16 @@
 		&__content {
 			position: absolute;
 			background: var(--base-background-white);
+			overflow-y: scroll;
 			z-index: 9;
 			height: 100%;
 			width: 450px;
 			transition: all 0.3s ease-in-out;
+			&__header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
 		}
 	}
 

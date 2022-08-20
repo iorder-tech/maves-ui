@@ -67,6 +67,8 @@ The `m-button` component replaces the standard html button.
 | icon     | boolean | false   | Hide text in the button |
 | iconName | string  |         | Choose icon             |
 | maxWidth | string  |         | Set maxWidth to button  |
+| radius   | number  | 4       | Set radius to button    |
+| height   | string  | 40px    | Set height to button    |
 
 ### Events
 

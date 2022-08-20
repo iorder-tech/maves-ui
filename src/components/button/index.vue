@@ -1,6 +1,6 @@
 <template>
 	<button class="btn" :disabled="disabled" :style="styles">
-		<font-awesome-icon :icon="iconName" v-if="iconName" :style="svgStyles" />
+		<icon :icon="iconName" v-if="iconName" :style="svgStyles" />
 		<slot v-if="!icon" />
 	</button>
 </template>
@@ -8,12 +8,14 @@
 <script setup lang="ts">
 	import { computed } from 'vue'
 
-	const { type, icon, maxWidth } = defineProps<{
+	const { type, icon, maxWidth, radius, height } = defineProps<{
 		type: 'primary' | 'ghost'
 		disabled?: boolean
 		iconName?: string
 		icon?: boolean
 		maxWidth?: string
+		height?: string
+		radius?: number
 	}>()
 
 	const background = computed(() => {
@@ -43,12 +45,16 @@
 	})
 
 	const iconMarginRight = computed(() => (icon ? '0' : '8px'))
+
 	const styles = computed(() => ({
 		width: width.value,
+		height: height || '40px',
 		marginRight: iconMarginRight.value,
 		background: background.value,
 		color: color.value,
+		borderRadius: `${radius}px` || '4px',
 	}))
+
 	const svgStyles = computed(() => ({
 		marginRight: !icon ? '10px' : 0,
 	}))
