@@ -3,7 +3,7 @@
 		<div class="text-field__label" v-if="label">{{ label }}</div>
 		<div class="text-field__content" :style="styles">
 			<div class="text-field__content--icon" v-if="icon">
-				<!-- <icon :name="icon" /> -->
+				<font-awesome-icon :icon="icon" />
 			</div>
 			<input
 				@input="updateValue"
@@ -74,8 +74,8 @@
 				background: transparent;
 				outline: none;
 				height: 100%;
-				padding-left: 16px;
-				padding-right: 16px;
+				padding-left: 10px;
+				padding-right: 10px;
 				width: 100%;
 				&::placeholder {
 					/* color: v-bind(placeholderColor); */
@@ -89,7 +89,7 @@
 				}
 			}
 			&--icon {
-				padding-left: 7.5px;
+				padding-left: 10px;
 				display: flex;
 				align-items: center;
 			}

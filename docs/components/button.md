@@ -43,7 +43,7 @@ The `m-button` component replaces the standard html button.
 <br>
 
 <DemoContainer>
-  <Button iconName="test">Text with Icon</Button>
+  <Button iconName="fa-solid fa-house">Text with Icon</Button>
 </DemoContainer>
 
 <<< @/components/demo/Button/textWithIcon.vue
@@ -53,7 +53,7 @@ The `m-button` component replaces the standard html button.
 <br>
 
 <DemoContainer>
-  <Button iconName="test" icon />
+  <Button iconName="fa-solid fa-house" icon />
 </DemoContainer>
 
 <<< @/components/demo/Button/icon.vue

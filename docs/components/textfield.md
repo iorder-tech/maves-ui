@@ -45,7 +45,7 @@ The `m-text-field` fields components are used for collecting user provided infor
 <br />
 
 <DemoContainer>
-  <TextField error errorMessage="User or password wrong!" />
+  <TextField icon="fa-solid fa-lock" error errorMessage="User or password wrong!" />
 </DemoContainer>
 
 <<< @/components/demo/TextField/error.vue

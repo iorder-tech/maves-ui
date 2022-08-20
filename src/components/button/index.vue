@@ -1,6 +1,6 @@
 <template>
 	<button class="btn" :disabled="disabled" :style="styles">
-		<!-- <Icon :name="iconName" v-if="iconName" /> -->
+		<font-awesome-icon :icon="iconName" v-if="iconName" :style="svgStyles" />
 		<slot v-if="!icon" />
 	</button>
 </template>
@@ -49,6 +49,9 @@
 		background: background.value,
 		color: color.value,
 	}))
+	const svgStyles = computed(() => ({
+		marginRight: !icon ? '10px' : 0,
+	}))
 </script>
 
 <style lang="scss" scoped>
@@ -67,9 +70,6 @@
 		}
 		&:active {
 			transform: scale(0.99);
-		}
-		svg {
-			/* margin-right: v-bind(iconMarginRight); */
 		}
 	}
 </style>
