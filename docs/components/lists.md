@@ -11,7 +11,7 @@ The `m-list` component is used to display information. It can contain an avatar,
 ## Examples
 
 <DemoContainer>
-  <List />
+  <Lists />
 </DemoContainer>
 
 <<< @/components/demo/Lists/index.vue

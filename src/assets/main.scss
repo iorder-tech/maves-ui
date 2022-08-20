@@ -28,16 +28,3 @@
 	// input
 	--input-background-color: #f0f0f0;
 }
-
-[class^='icon-'],
-[class*=' icon-'] {
-	font-family: 'myfont' !important;
-}
-
-.icon-heart:before {
-	content: '\e9da';
-}
-
-.global-example {
-	color: red;
-}

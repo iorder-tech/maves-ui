@@ -1,6 +1,6 @@
 <template>
 	<button class="btn" :disabled="disabled">
-		<Icon :name="iconName" v-if="iconName" />
+		<!-- <Icon :name="iconName" v-if="iconName" /> -->
 		<slot v-if="!icon" />
 	</button>
 </template>
@@ -8,15 +8,13 @@
 <script setup lang="ts">
 	import { computed } from 'vue'
 
-	interface Props {
+	const { type, icon, maxWidth } = defineProps<{
 		type: 'primary' | 'ghost'
 		disabled?: boolean
 		iconName?: string
 		icon?: boolean
 		maxWidth?: string
-	}
-
-	const { type, icon, maxWidth } = defineProps<Props>()
+	}>()
 
 	const background = computed(() => {
 		let bg = '--base-color-primary'
@@ -49,13 +47,13 @@
 
 <style lang="scss" scoped>
 	.btn {
-		width: v-bind(width);
-		max-width: v-bind(maxWidth);
+		/* width: v-bind(width); */
+		/* max-width: v-bind(maxWidth); */
 		height: 42px;
 		border: 1px solid transparent;
 		border-radius: 4px;
-		background: v-bind(background);
-		color: v-bind(color);
+		/* background: v-bind(background); */
+		/* color: v-bind(color); */
 		font-weight: 600;
 		display: flex;
 		align-items: center;
@@ -69,7 +67,7 @@
 			transform: scale(0.99);
 		}
 		svg {
-			margin-right: v-bind(iconMarginRight);
+			/* margin-right: v-bind(iconMarginRight); */
 		}
 	}
 </style>

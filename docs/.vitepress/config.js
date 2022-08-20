@@ -32,7 +32,6 @@ module.exports = {
 			alias: {
 				'mavis-ui': path.resolve(__dirname, '../../src'),
 			},
-			dedupe: ['vue', /primevue\/.+/],
 		},
 	},
 }

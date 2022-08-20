@@ -28,7 +28,7 @@
 		&--overlay {
 			background: rgba(0, 0, 0, 0.5);
 			position: absolute;
-			right: v-bind(position);
+			/* right: v-bind(position); */
 			width: 100%;
 			height: 100%;
 			translate: all 0.2s ease;
@@ -45,11 +45,11 @@
 
 	.slide-enter-active,
 	.slide-leave-active {
-		transform: translateX(v-bind(animation));
+		/* transform: translateX(v-bind(animation)); */
 	}
 	.slide-enter,
 	.slide-leave-to {
-		transform: translateX(v-bind(animation));
+		/* transform: translateX(v-bind(animation)); */
 	}
 	.fade-enter-active,
 	.fade-leave-active {
