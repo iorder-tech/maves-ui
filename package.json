@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"author": "Rafael Augusto <rafaelaugusto.developer@gmail.com>",
 	"license": "MIT",
+	"main": "./dist/mavis-ui.es.js",
 	"scripts": {
 		"build": "rimraf dist && vue-tsc && vite build",
 		"docs:dev": "vitepress dev docs",
