@@ -47,7 +47,7 @@
 
 <style lang="scss" scoped>
 	.btn {
-		/* width: v-bind(width); */
+		/* width: v-bind('width'); */
 		/* max-width: v-bind(maxWidth); */
 		height: 42px;
 		border: 1px solid transparent;

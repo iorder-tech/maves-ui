@@ -11,14 +11,14 @@ module.exports = {
 		sidebar: [
 			{
 				text: 'Introdution',
-				children: [
+				items: [
 					{ text: 'What is Mavis UI?', link: '/' },
 					{ text: 'Getting Started', link: '/guide/' },
 				],
 			},
 			{
 				text: 'Components',
-				children: [
+				items: [
 					{ text: 'Button', link: '/components/button' },
 					{ text: 'Card', link: '/components/card' },
 					{ text: 'Lists', link: '/components/lists' },
