@@ -2,7 +2,7 @@
 import Typography from './demo/Typography/index.vue'
 </script>
 
-# NavBar
+# Typography
 
 The `m-typography` Control text size, alignment, wrapping, overflow, transforms and more.
 

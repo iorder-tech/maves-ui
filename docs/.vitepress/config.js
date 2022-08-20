@@ -22,6 +22,7 @@ module.exports = {
 					{ text: 'Nav Bar', link: '/components/navbar' },
 					{ text: 'Text Field', link: '/components/textfield' },
 					{ text: 'Typography', link: '/components/typography' },
+					{ text: 'Navigation Drawer', link: '/components/navigationdrawer' },
 				],
 			},
 		],
