@@ -8,7 +8,7 @@ import * as components from './components'
 
 library.add(fas)
 
-function install(app: App) {
+async function install(app: App) {
 	for (const key in components) {
 		app.use(maska)
 		app.component('icon', FontAwesomeIcon)

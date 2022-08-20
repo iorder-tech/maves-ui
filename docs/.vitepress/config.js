@@ -31,6 +31,9 @@ module.exports = {
 		],
 	},
 	vite: {
+		ssr: {
+			noExternal: ['@fortawesome/*'],
+		},
 		resolve: {
 			alias: {
 				'mavis-ui': path.resolve(__dirname, '../../src'),
