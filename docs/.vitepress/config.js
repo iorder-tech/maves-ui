@@ -21,6 +21,7 @@ module.exports = {
 					{ text: 'Lists', link: '/components/lists' },
 					{ text: 'Nav Bar', link: '/components/navbar' },
 					{ text: 'Text Field', link: '/components/textfield' },
+					{ text: 'Typography', link: '/components/typography' },
 				],
 			},
 		],

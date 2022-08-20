@@ -9,7 +9,7 @@ import MList from './list/index.vue'
 import MNavBar from './nav-bar/index.vue'
 // import NavigationDrawer from './navigation-drawer/index.vue'
 import MTextField from './text-field/index.vue'
-// import Typography from './typography/index.vue'
+import MTypography from './typography/index.vue'
 
 export {
 	MButton,
@@ -23,5 +23,5 @@ export {
 	MNavBar,
 	// NavigationDrawer,
 	MTextField,
-	// Typography,
+	MTypography,
 }
