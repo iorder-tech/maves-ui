@@ -1,4 +1,4 @@
-# What is My Lib?
+# What is Mavis UI?
 
 This library is a starter to create your own Vue 3 component library in TypeScript.
 
