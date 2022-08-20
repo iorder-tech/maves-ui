@@ -4,6 +4,8 @@ module.exports = {
 	title: 'Mavis UI',
 	description: 'Just playing around.',
 	base: '/mavis-ui/',
+	lastUpdated: true,
+	titleTemplate: 'Mavis UI - %s',
 	themeConfig: {
 		repo: 'https://github.com/wuruoyun/vue-component-lib-starter',
 		sidebar: [
