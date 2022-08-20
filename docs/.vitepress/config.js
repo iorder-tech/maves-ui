@@ -3,8 +3,8 @@ const path = require('path')
 module.exports = {
 	title: 'Mavis UI',
 	description: 'Just playing around.',
+	base: '/mavis-ui/',
 	themeConfig: {
-		base: '/mavis-ui/',
 		repo: 'https://github.com/wuruoyun/vue-component-lib-starter',
 		sidebar: [
 			{
