@@ -1,3 +1,3 @@
 <template>
-	<m-card>Test</m-card>
+	<m-nav-bar />
 </template>

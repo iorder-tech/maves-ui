@@ -3,12 +3,17 @@
 	"version": "0.0.1",
 	"author": "Rafael Augusto <rafaelaugusto.developer@gmail.com>",
 	"license": "MIT",
-	"main": "./dist/mavis-ui.es.js",
 	"scripts": {
 		"build": "rimraf dist && vue-tsc && vite build",
 		"docs:dev": "vitepress dev docs",
 		"docs:build": "vitepress build docs",
 		"docs:serve": "vitepress serve docs"
+	},
+	"peerDependencies": {
+		"primeflex": "^3.1.2",
+		"primeicons": "^5.0.0",
+		"primevue": "^3.11.1",
+		"vue": "^3.2.25"
 	},
 	"devDependencies": {
 		"@types/node": "^17.0.14",
@@ -24,12 +29,6 @@
 		"vue": "^3.2.37",
 		"vue-tsc": "^0.29.8"
 	},
-	"peerDependencies": {
-		"primeflex": "^3.1.2",
-		"primeicons": "^5.0.0",
-		"primevue": "^3.11.1",
-		"vue": "^3.2.25"
-	},
 	"files": [
 		"src",
 		"dist"
@@ -41,5 +40,8 @@
 			"import": "./dist/mavis-ui.es.js"
 		},
 		"./dist/style.css": "./dist/style.css"
+	},
+	"dependencies": {
+		"maska": "^1.5.0"
 	}
 }

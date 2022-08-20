@@ -1,18 +1,20 @@
 <script setup>
-import Card from './demo/Card/index.vue'
+import Lists from './demo/Lists/index.vue'
 </script>
 
-# Card
+# Lists
 
-The `m-card` component is a versatile component that can be used for anything from a panel to a static image. The card component has numerous helper components to make markup as easy as possible.
+The `m-list` component is used to display information. It can contain an avatar, content, actions, subheaders and much more. Lists present content in a way that makes it easy to identify a specific item in a collection. They provide a consistent styling for organizing groups of text and images.
+
+# API
 
 ## Examples
 
 <DemoContainer>
-  <Card />
+  <List />
 </DemoContainer>
 
-<<< @/components/demo/Card/index.vue
+<<< @/components/demo/Lists/index.vue
 
 ### Props
 

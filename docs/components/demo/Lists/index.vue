@@ -1,3 +1,3 @@
 <template>
-	<m-card>Test</m-card>
+	<m-card></m-card>
 </template>

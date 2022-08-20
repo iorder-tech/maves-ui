@@ -1,3 +1,3 @@
 <template>
-	<Button>Test</Button>
+	<m-button><slot /></m-button>
 </template>

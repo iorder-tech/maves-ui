@@ -1,7 +1,33 @@
-// @font-face {
-// 	font-family: 'myfont';
-// 	src: url('fonts/myfont.woff');
-// }
+:root {
+	--app-primary-color: #f40f46;
+	--app-blue-color: #0081ff;
+	--app-green-color: #50a773;
+	--app-yellow-color: #ffcd05;
+	--app-dark01-color: #000000;
+	--app-dark02-color: #666666;
+	--app-dark03-color: #b8b8b8;
+	--app-light02-color: #cccccc;
+	--app-light01-color: #f0f0f0;
+	--app-light-color: #ffffff;
+
+	--base-error-color: #f40f46;
+	--base-error-background-color: rgba(244, 15, 70, 0.08);
+
+	// background
+	--app-background-color: #f9f9f9;
+	--base-background-white: #fff;
+
+	--base-color-primary: var(--app-primary-color);
+	--base-color-transparent: transparent;
+
+	// text
+	--base-text-color-white: #fff;
+
+	--drawer-size: 250px;
+
+	// input
+	--input-background-color: #f0f0f0;
+}
 
 [class^='icon-'],
 [class*=' icon-'] {

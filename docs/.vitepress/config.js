@@ -18,6 +18,9 @@ module.exports = {
 				children: [
 					{ text: 'Button', link: '/components/button' },
 					{ text: 'Card', link: '/components/card' },
+					{ text: 'Lists', link: '/components/lists' },
+					{ text: 'Nav Bar', link: '/components/navbar' },
+					{ text: 'Text Field', link: '/components/textfield' },
 				],
 			},
 		],

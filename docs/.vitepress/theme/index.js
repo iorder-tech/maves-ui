@@ -12,7 +12,7 @@ import './custom.css'
 
 export default {
 	...DefaultTheme,
-	async enhanceApp({ app }) {
+	enhanceApp({ app }) {
 		app.use(PrimeVue)
 		app.use(MavisUi)
 		app.component('DemoContainer', DemoContainer)

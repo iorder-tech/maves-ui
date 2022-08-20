@@ -20,88 +20,90 @@
 </template>
 
 <script setup lang="ts">
-import { Ref, ref, computed } from 'vue'
+	import { Ref, ref, computed } from 'vue'
 
-const { placeholderColor, maxLength, error } = defineProps<{
-	placeholder?: string
-	modelValue: string
-	label?: string
-	count?: boolean
-	maxLength?: number
-	icon?: string
-	mask?: string
-	placeholderColor?: string
-	disabled?: boolean
-	error?: boolean
-	errorMessage?: string
-}>()
+	const { placeholderColor, maxLength, error } = defineProps<{
+		placeholder?: string
+		modelValue?: string
+		label?: string
+		count?: boolean
+		maxLength?: number
+		icon?: string
+		mask?: string
+		placeholderColor?: string
+		disabled?: boolean
+		error?: boolean
+		errorMessage?: string
+	}>()
 
-const emit = defineEmits(['update:modelValue'])
+	const emit = defineEmits(['update:modelValue'])
 
-const text: Ref<string> = ref('')
+	const text: Ref<string> = ref('')
 
-const updateValue = (e: Event) => {
-	text.value = (e.target as HTMLInputElement).value
-	emit('update:modelValue', (e.target as HTMLInputElement).value)
-}
+	const updateValue = (e: Event) => {
+		text.value = (e.target as HTMLInputElement).value
+		emit('update:modelValue', (e.target as HTMLInputElement).value)
+	}
 
-const countValue = computed(
-	() => `${text.value.length}/${maxLength} caracteres`
-)
+	const countValue = computed(
+		() => `${text.value.length}/${maxLength} caracteres`
+	)
 
-const background = computed(() =>
-	error ? 'var(--base-error-background-color)' : 'var(--input-background-color)'
-)
+	const background = computed(() =>
+		error
+			? 'var(--base-error-background-color)'
+			: 'var(--input-background-color)'
+	)
 </script>
 
 <style scoped lang="scss">
-.text-field {
-	width: 100%;
-	&__content {
-		display: flex;
-		align-items: center;
-		height: 40px;
-		background: v-bind(background);
-		border-radius: 5px;
-		flex: 1;
-		input {
-			border: 0;
-			background: transparent;
-			outline: none;
-			height: 100%;
-			padding-left: 16px;
-			padding-right: 16px;
-			width: 100%;
-			&::placeholder {
-				color: v-bind(placeholderColor);
-				opacity: 1;
-			}
-			&::-ms-input-placeholder {
-				color: v-bind(placeholderColor);
-			}
-			&:disabled {
-				color: var(--app-light02-color);
-			}
-		}
-		&--icon {
-			padding-left: 7.5px;
+	.text-field {
+		width: 100%;
+		&__content {
 			display: flex;
 			align-items: center;
+			height: 40px;
+			background: v-bind(background);
+			border-radius: 5px;
+			flex: 1;
+			input {
+				border: 0;
+				background: transparent;
+				outline: none;
+				height: 100%;
+				padding-left: 16px;
+				padding-right: 16px;
+				width: 100%;
+				&::placeholder {
+					color: v-bind(placeholderColor);
+					opacity: 1;
+				}
+				&::-ms-input-placeholder {
+					color: v-bind(placeholderColor);
+				}
+				&:disabled {
+					color: var(--app-light02-color);
+				}
+			}
+			&--icon {
+				padding-left: 7.5px;
+				display: flex;
+				align-items: center;
+			}
 		}
-	}
-	&__label {
-		font-size: 12px;
-		margin-bottom: 4px;
-	}
-	&__count {
-		text-align: right;
-	}
-	&__error {
-		&--message {
+		&__label {
 			font-size: 12px;
-			margin-top: 4px;
-			color: var(--base-error-color);
+			margin-bottom: 4px;
+		}
+		&__count {
+			text-align: right;
+		}
+		&__error {
+			&--message {
+				font-size: 12px;
+				margin-top: 4px;
+				color: var(--base-error-color);
+			}
 		}
 	}
-}
 </style>

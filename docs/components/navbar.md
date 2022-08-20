@@ -1,18 +1,20 @@
 <script setup>
-import Card from './demo/Card/index.vue'
+import NavBar from './demo/NavBar/index.vue'
 </script>
 
-# Card
+# NavBar
 
-The `m-card` component is a versatile component that can be used for anything from a panel to a static image. The card component has numerous helper components to make markup as easy as possible.
+The `m-nav-bar` component is pivotal to any graphical user interface (GUI), as it generally is the primary source of site navigation.
+
+# API
 
 ## Examples
 
 <DemoContainer>
-  <Card />
+  <NavBar />
 </DemoContainer>
 
-<<< @/components/demo/Card/index.vue
+<<< @/components/demo/NavBar/index.vue
 
 ### Props
 
