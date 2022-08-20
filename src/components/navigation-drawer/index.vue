@@ -14,9 +14,6 @@
 		modelValue: boolean
 		location: 'left' | 'right'
 	}>()
-
-	const position = props.location === 'right' ? 0 : 'inherit'
-	const animation = props.location === 'left' ? '-100%' : '100%'
 </script>
 
 <style lang="scss" scoped>
@@ -28,7 +25,7 @@
 		&--overlay {
 			background: rgba(0, 0, 0, 0.5);
 			position: absolute;
-			/* right: v-bind(position); */
+			right: inherit;
 			width: 100%;
 			height: 100%;
 			translate: all 0.2s ease;
@@ -45,11 +42,11 @@
 
 	.slide-enter-active,
 	.slide-leave-active {
-		/* transform: translateX(v-bind(animation)); */
+		transform: translateX(-100%);
 	}
 	.slide-enter,
 	.slide-leave-to {
-		/* transform: translateX(v-bind(animation)); */
+		transform: translateX(-100%);
 	}
 	.fade-enter-active,
 	.fade-leave-active {

@@ -1,5 +1,5 @@
 <template>
-	<div class="navbar">
+	<div class="navbar" :style="styles">
 		<m-card class="navbar__content">
 			<div class="profile">Olá, Rafael</div>
 		</m-card>
@@ -16,6 +16,10 @@
 	const width = computed(() =>
 		props.app ? 'calc(100% - var(--drawer-size))' : '100%'
 	)
+
+	const styles = computed(() => ({
+		width: width.value,
+	}))
 </script>
 
 <style lang="scss" scoped>
@@ -24,7 +28,6 @@
 		padding-top: 20px;
 		padding-left: 20px;
 		padding-right: 20px;
-		/* width: v-bind(width); */
 		right: 0;
 		top: 0;
 		&__content {
