@@ -16,24 +16,22 @@
 <script setup lang="ts">
 	import { computed } from 'vue'
 
-	interface Props {
-		type:
-			| 'h1'
-			| 'h2'
-			| 'h3'
-			| 'subtitle'
-			| 'subtitle2'
-			| 'body'
-			| 'description'
-			| 'caption'
-		fontWeight: string
-		color: string
-		marginTop: string
-		marginBottom: string
-	}
-
 	const { fontWeight, color, marginTop, marginBottom } = withDefaults(
-		defineProps<Props>(),
+		defineProps<{
+			type:
+				| 'h1'
+				| 'h2'
+				| 'h3'
+				| 'subtitle'
+				| 'subtitle2'
+				| 'body'
+				| 'description'
+				| 'caption'
+			fontWeight: string
+			color: string
+			marginTop: string
+			marginBottom: string
+		}>(),
 		{
 			type: 'h1',
 			fontWeight: '500',
